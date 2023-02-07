@@ -34,7 +34,7 @@ html{
 ===============================
 */
 :root{
-	--primary-color: #f56aa2 ;
+	--primary-color: #791a07;
 	--secondary-color: #071418;
 	--third-color: #F5A9BC;
 	--white-color: #fff;
@@ -72,8 +72,10 @@ body{
 h1{
 	font-size: 3rem;
 	font-weight: 900;
-	margin-bottom: 3rem;
-	color: var(--secondary-color);
+	margin-bottom: 2rem;
+	color: var(--primary-color);
+	margin-left: 8.5rem;
+	flex: auto;
 }
 h2{
 	font-weight: 700;
@@ -102,14 +104,29 @@ p{
 	font-size: 1rem;
 	color: var(--text-color);
 	font-weight: 400;
+	margin-left: 20rem;
 	line-height: 1.75rem;
 	letter-spacing: 1px;
 }
-.main-button{
+
+.wrapper{
+	padding-top: 8.25rem;
+	padding-bottom: 8.25rem;
+}
+.text-content{
+	width: 70%;
+	margin: auto;
+}
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2{
+	color: var(--white-color);
+}
+.btn{
 	display: inline-block;
 	margin-top: 0.005rem;
-	margin-left: 1rem;
-	padding: 0.625rem 1.875rem;
+	margin-left: 0.625rem;
+	padding: 0.3125rem 1.4375rem;
 	line-height: 1.5625rem;
 	background-color: var(--primary-color);
 	border: 0.1875rem solid var(--primary-color);
@@ -124,33 +141,43 @@ p{
 	transition: all .4s ease-out 0s;
 
 }
-.main-button:hover{
+.white-btn{
+	padding: 0.3125rem 1.4375rem;;
+	line-height: 25px;
+	background-color: var(--white-color);
+	color: var(--text-color);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+	-webkit-transition: all .4s ease-out 0s;
+	-o-transition: all .4s ease-out 0s;
+	-moz-transition: all .4s ease-out 0s;
+	transition: all .4s ease-out 0s;
+}
+.white-btn:hover{
 	background-color: transparent;
 	color: var(--primary-color);
+	border-color: var(--primary-color);
 }
-.wrapper{
-	padding-top: 8.25rem;
-	padding-bottom: 8.25rem;
-}
-.text-content{
-	width: 70%;
-	margin: auto;
-}
-.counter-section h2,
-.testimonial-section h2,
-.book-food-text h2{
-	color: var(--white-color);
-}
+
 /*
 ===============================
 	Header desigining
 ===============================
 */
-
-img{
-	height: 70px;
+.navbar{
+	position: fixed;
+	left: 0;
+	transition: all 0.3s ease-out;
+	z-index: 1000;
+	-webkit-transition: all 0.3s ease-out;
+	width: 100%;
+}
+.navbar img{
+	height: 80px;
 	width: 150px;
-	border: 1px solid pink;
+	border: none;
 	background: transparent;
 	margin-top: 1rem;
 	border-radius: 15px;
@@ -179,4 +206,50 @@ img{
 }
 .navbar ul li a:hover{
 	color: var(--black-color);
+}
+.nav-link{
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: var(--primary-color);
+	letter-spacing: 1px;
+
+}
+.navbar .main-button{
+	display: inline-block;
+	margin-top: 0.005rem;
+	margin-left: 0.625rem;
+	padding: 0.3125rem 1.4375rem;
+	line-height: 1.5625rem;
+	background-color: var(--primary-color);
+	border: 0.1875rem solid var(--primary-color);
+	color: var(--white-color);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+	-webkit-transition: all .4s ease-out 0s;
+	-o-transition: all .4s ease-out 0s;
+	-moz-transition: all .4s ease-out 0s;
+	transition: all .4s ease-out 0s;
+
+}
+.main-button:hover{
+	background-color: transparent;
+	color: var(--primary-color);
+}
+/*
+=======================
+	Banner design
+=======================
+*/
+.top-banner{
+	width: 100%;
+	background: url('../Image/food-4.jpg') no-repeat center;
+	background-size: cover;
+	padding: 16.875rem 0 9.375rem;
+}
+.top-banner-class-button{
+	margin-left: 30rem ;
+	margin-top: 2rem;
 }
